@@ -1,5 +1,6 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate, :only => [:destroy]
 
   # GET /breweries
   # GET /breweries.json
@@ -28,7 +29,7 @@ class BreweriesController < ApplicationController
 
     respond_to do |format|
       if @brewery.save
-        format.html { redirect_to @brewery, notice: 'Brewery was successfully created.' }
+        format.html { redirect_to breweries_path, notice: 'Brewery was successfully created.' }
         format.json { render action: 'show', status: :created, location: @brewery }
       else
         format.html { render action: 'new' }
@@ -70,5 +71,14 @@ class BreweriesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def brewery_params
       params.require(:brewery).permit(:name, :year)
+    end
+
+
+  private
+    def authenticate
+      admin_accounts = { "admin" => "secret", "pekka" => "beer", "arto" => "foobar", "matti" => "ittam"}
+      authenticate_or_request_with_http_basic do |username|
+        admin_accounts[username]
+      end
     end
 end

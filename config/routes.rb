@@ -7,6 +7,10 @@ Ratebeer::Application.routes.draw do
 
   root 'breweries#index'
 
+  get 'ratings/new', to:'ratings#new'
+
+  resources :ratings, :only => [:index, :new, :create, :destroy]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
