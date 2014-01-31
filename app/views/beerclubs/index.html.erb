@@ -1,0 +1,28 @@
+<h1>Listing beerclubs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Founded</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beerclubs.each do |beerclub| %>
+      <tr>
+        <td><%= link_to (beerclub.name), beerclub_path(beerclub) %></td>
+        <td><%= beerclub.founded %></td>
+        <td><%= beerclub.city %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beerclub', new_beerclub_path %>

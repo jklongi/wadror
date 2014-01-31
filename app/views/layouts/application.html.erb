@@ -8,10 +8,28 @@
 </head>
 <body>
     <div class="navibar">
-        <%= link_to 'breweries', breweries_path %>
-        <%= link_to 'beers', beers_path %>
+      <%= link_to 'breweries', breweries_path %>
+      <%= link_to 'beers', beers_path %>
       <%= link_to 'ratings', ratings_path %>
+      <%= link_to 'beerclubs', beerclubs_path %>
+      <% if not current_user.nil? %>
+          <%= ' | ' %>
+          <%= link_to 'rate a beer', new_rating_path %>
+          <%= link_to 'join a club', new_membership_path %>
+          <div style="float: right">
+            <%= link_to (current_user.username), user_path(current_user) %>
+            <%= link_to 'signout', signout_path, method: :delete %>
+          </div>
+      <% else %>
+          <div style="float: right">
+            <%= link_to 'signin', signin_path%>
+            <%= link_to 'signup', signup_path%>
+          </div>
+      <% end %>
     </div>
+
+
+
 <%= yield %>
 
 </body>
