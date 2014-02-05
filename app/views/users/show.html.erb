@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Favourite style:</strong>
+  <%= @user.favorite_style %>
+</p>
+
+<p>
   <% if @user.ratings.empty? %>
       No ratings yet!
   <% else %>
@@ -23,6 +28,8 @@
       </li>
   <% end %>
 </ul>
+
+
 
 
 <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |

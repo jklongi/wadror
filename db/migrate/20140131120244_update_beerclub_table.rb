@@ -1,7 +1,5 @@
 class UpdateBeerclubTable < ActiveRecord::Migration
-  def change
-    change_table :beerclubs do |t|
-
-    end
+  change_table :beerclubs do |t|
+    t.remove :user_id
   end
 end

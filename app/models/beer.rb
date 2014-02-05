@@ -6,6 +6,7 @@ class Beer < ActiveRecord::Base
   has_many :raters, -> { uniq }, through: :ratings, source: :user
 
   validates :name, presence: true, allow_blank: false
+  validates :style, presence: true
 
   def to_s
     return "#{self.name}, #{self.brewery.name}"

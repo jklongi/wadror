@@ -8,4 +8,9 @@ class Rating < ActiveRecord::Base
   def to_s
     "#{beer.name} #{score}"
   end
+
+  def get_score
+    "#{score}"
+  end
+
 end
