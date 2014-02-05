@@ -1,2 +1,8 @@
 Heroku Linkki
 http://desolate-atoll-8979.herokuapp.com/breweries
+
+Travis
+[![Build Status](https://travis-ci.org/jklongi/wadror.png?branch=master)](https://travis-ci.org/jklongi/wadror)
+
+Code Climate
+[![Code Climate](https://codeclimate.com/github/jklongi/wadror.png)](https://codeclimate.com/github/jklongi/wadror)

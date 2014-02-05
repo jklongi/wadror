@@ -1,10 +1,15 @@
 language: ruby
-
 rvm:
- - 2.0.0
-
+- 2.0.0
 script:
- - bundle exec rake db:migrate --trace
- - RAILS_ENV=test bundle exec rake db:migrate --trace
- - bundle exec rake db:test:prepare
- - bundle exec rspec -fd spec/
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: nilGmsJxYuQR6wvzLeEB99KWu/QKf1GZ/OjhoyuJkuOKyo0noKeZKrIctATLa6vHsEh8UYuu1Sf9qylUiPKb/9itEnkseCYCULbQCJZlX9p9ldq1+8xxSviC0oZZgEvGuPVueaNRBolOzTdSp9w6tSWu2h7rE3wlS5E5f0YQ4xc=
+  app: desolate-atoll-8979
+  on:
+    repo: jklongi/wadror
