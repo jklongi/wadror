@@ -21,6 +21,7 @@ describe "User" do
       expect(current_path).to eq(signin_path)
       expect(page).to have_content 'username and password do not match'
     end
+
   end
 
   it "when signed up with good credentials, is added to the system" do
@@ -34,7 +35,7 @@ describe "User" do
     }.to change{User.count}.by(1)
   end
 
-  describe "ratings" do
+  describe "page" do
     let! (:user2) { FactoryGirl.create :user2 }
     let! (:user3) { FactoryGirl.create :user3 }
     let!(:brewery) { FactoryGirl.create :brewery, name:"Koff" }
@@ -44,7 +45,7 @@ describe "User" do
     let!(:rating3) { FactoryGirl.create :rating, score: 30, beer_id: beer1.id, user_id: user3.id}
 
 
-    it "are showing" do
+    it "ratings are showing" do
       visit user_path(user2)
       expect(page).to have_content 'Jussi'
       expect(page).to have_content 'Has 2 ratings'
@@ -54,12 +55,24 @@ describe "User" do
       expect(page).to_not have_content '30'
     end
 
-    it "can be deleted" do
+    it "ratings can be deleted" do
       visit user_path(user2)
       sign_in(username:"Jussi", password:"Foobar1")
       expect(user2.ratings.count).to eq(2)
       page.first(:link, "delete").click
       expect(user2.ratings.count).to eq(1)
+    end
+
+    it "has favourite style" do
+      visit user_path(user2)
+      expect(page).to have_content 'Favourite style:'
+      expect(page).to have_content 'Lager'
+    end
+
+    it "has favourite brewery" do
+      visit user_path(user2)
+      expect(page).to have_content 'Favourite brewery:'
+      expect(page).to have_content 'Koff'
     end
 
   end

@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>Favourite brewery:</strong>
+  <%= @user.favorite_brewery %>
+</p>
+
+<p>
   <% if @user.ratings.empty? %>
       No ratings yet!
   <% else %>

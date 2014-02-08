@@ -12,5 +12,4 @@ class Rating < ActiveRecord::Base
   def get_score
     "#{score}"
   end
-
 end
