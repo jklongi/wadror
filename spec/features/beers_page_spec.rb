@@ -14,27 +14,36 @@ describe "Beers page" do
     expect(page).to have_content 'New beer'
   end
 
-  it "new beer can be created" do
+  it "should add new beer with valid data" do
+    brewery = FactoryGirl.create(:brewery)
+    style = FactoryGirl.create(:style)
     visit new_beer_path
-    fill_in('beer_name', with:'Olut')
-    select('Weizen', from:'beer_style')
-    select('Koff', from:'beer_brewery_id')
+
+    fill_in('beer_name', with:'Test')
+
+    select(style.name, from: 'beer_style_id')
+    select(brewery.name, from: 'beer_brewery_id')
+
     expect{
       click_button('Create Beer')
-    }.to change{Beer.count}.from(0).to(1)
+    }.to change{Beer.count}.by(1)
   end
 
-  it "invalid beer is not added to db" do
+
+  it "should not add new beer with invalid data" do
+    brewery = FactoryGirl.create(:brewery)
+    style = FactoryGirl.create(:style)
     visit new_beer_path
-    fill_in('beer_name', with:'')
-    select('Weizen', from:'beer_style')
-    select('Koff', from:'beer_brewery_id')
+
+    select(style.name, from: 'beer_style_id')
+    select(brewery.name, from: 'beer_brewery_id')
+
     expect{
       click_button('Create Beer')
-    }.to_not change{Beer.count}.to eq(0)
-    expect(current_path).to eq(beers_path)
-    expect(page).to have_content 'error'
+    }.to change{Beer.count}.by(0)
 
+    expect(current_path).to eq(beers_path)
+    expect(page).to have_content "Name can't be blank"
   end
 
 
