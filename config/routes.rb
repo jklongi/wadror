@@ -9,6 +9,12 @@ Ratebeer::Application.routes.draw do
 
   resources :breweries
 
+  resources :places, only:[:index, :show]
+
+  resources :ratings, :only => [:index, :new, :create, :destroy]
+
+  resources :sessions, only: [:new, :create, :destroy]
+
 
   get 'ratings', to: 'ratings#index'
 
@@ -21,10 +27,6 @@ Ratebeer::Application.routes.draw do
   get 'places', to: 'places#index'
 
   post 'places', to:'places#search'
-
-  resources :ratings, :only => [:index, :new, :create, :destroy]
-
-  resources :sessions, only: [:new, :create, :destroy]
 
   get 'signin', to: 'sessions#new'
 
