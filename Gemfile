@@ -26,6 +26,10 @@ group :test do
   gem 'launchy'
 end
 
+gem 'webmock'
+
+gem 'httparty'
+
 gem 'simplecov', require: false
 
 # Use SCSS for stylesheets
