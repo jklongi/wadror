@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe "Places" do
+  before :all do Rails.cache.clear
+
+  end
 
   it "if one is returned by the API, it is shown at the page" do
     BeermappingApi.stub(:places_in).with("kumpula").and_return(

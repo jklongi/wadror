@@ -11,6 +11,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem "rails-settings-cached", "0.3.1"
+
 group :production do
    gem 'pg'
    gem 'rails_12factor' 
@@ -24,9 +26,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'webmock'
 end
-
-gem 'webmock'
 
 gem 'httparty'
 
