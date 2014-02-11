@@ -18,7 +18,7 @@ class BeerclubsController < ApplicationController
 
   # GET /beer_clubs/new
   def new
-    @beer_club = Beerclub.new
+    @beerclub = Beerclub.new
   end
 
   # GET /beer_clubs/1/edit
@@ -28,7 +28,7 @@ class BeerclubsController < ApplicationController
   # POST /beer_clubs
   # POST /beer_clubs.json
   def create
-    @beer_club = Beerclub.new(beerclub_params)
+    @beerclub = Beerclub.new(beer_club_params)
 
     respond_to do |format|
       if @beerclub.save
@@ -45,7 +45,7 @@ class BeerclubsController < ApplicationController
   # PATCH/PUT /beer_clubs/1.json
   def update
     respond_to do |format|
-      if @beer_club.update(beerclub_params)
+      if @beer_club.update(beer_club_params)
         format.html { redirect_to @beerclub, notice: 'Beer club was successfully updated.' }
         format.json { head :no_content }
       else
@@ -60,7 +60,7 @@ class BeerclubsController < ApplicationController
   def destroy
     @beerclub.destroy
     respond_to do |format|
-      format.html { redirect_to beerclubs_url }
+      format.html { redirect_to beer_clubs_url }
       format.json { head :no_content }
     end
   end

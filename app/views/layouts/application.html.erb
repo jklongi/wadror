@@ -15,9 +15,6 @@
       <%= link_to 'beerclubs', beerclubs_path %>
       <%= link_to 'places', places_path %>
       <% if not current_user.nil? %>
-          <%= ' | ' %>
-          <%= link_to 'rate a beer', new_rating_path %>
-          <%= link_to 'join a club', new_membership_path %>
           <div style="float: right">
             <%= link_to (current_user.username), user_path(current_user) %>
             <%= link_to 'signout', signout_path, method: :delete %>
