@@ -23,37 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="beers_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/beers_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="51" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.0" vertical-offset="956" max-vertical-offset="1395">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/styles/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="5" selection-start="270" selection-end="270" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="420">
-              <folding>
-                <marker date="1392144438000" expanded="true" signature="36:87" placeholder="..." />
-                <marker date="1392144438000" expanded="true" signature="92:157" placeholder="..." />
-                <marker date="1392144438000" expanded="true" signature="179:269" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,10 +50,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="beer_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="beer_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/models/beer_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="3" selection-start="376" selection-end="376" vertical-scroll-proportion="0.61503416" vertical-offset="0" max-vertical-offset="439">
+            <state line="18" column="3" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/beers/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/beers/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="9" selection-start="872" selection-end="872" vertical-scroll-proportion="-14.541667" vertical-offset="71" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/beers/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="26" selection-start="325" selection-end="325" vertical-scroll-proportion="-6.4166665" vertical-offset="116" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -108,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="beermapping_api_spec.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="beermapping_api_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/lib/beermapping_api_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="900">
+            <state line="49" column="3" selection-start="5960" selection-end="5960" vertical-scroll-proportion="0.9600939" vertical-offset="326" max-vertical-offset="825">
               <folding />
             </state>
           </provider>
@@ -146,7 +142,6 @@
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/spec/features/places_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/places_controller.rb" />
-        <option value="$PROJECT_DIR$/spec/lib/beermapping_api_spec.rb" />
         <option value="$PROJECT_DIR$/lib/beermapping_api.rb" />
         <option value="$PROJECT_DIR$/app/views/places/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/places/index.html.erb" />
@@ -178,6 +173,7 @@
         <option value="$PROJECT_DIR$/spec/features/ratings_spec.rb" />
         <option value="$PROJECT_DIR$/spec/features/beers_page_spec.rb" />
         <option value="$PROJECT_DIR$/spec/models/beer_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/lib/beermapping_api_spec.rb" />
       </list>
     </option>
   </component>
@@ -295,6 +291,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -483,13 +533,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/helpers/users_helper_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/helpers/memberships_helper_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
@@ -710,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/beers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.4166665" vertical-offset="140" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/beers/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="9" selection-start="545" selection-end="545" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="495">
@@ -759,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/beers/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="872" selection-end="872" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/style.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="3" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
@@ -791,9 +820,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="5" selection-start="270" selection-end="270" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="420">
           <folding>
-            <marker date="1392144438000" expanded="true" signature="36:87" placeholder="..." />
-            <marker date="1392144438000" expanded="true" signature="92:157" placeholder="..." />
-            <marker date="1392144438000" expanded="true" signature="179:269" placeholder="..." />
+            <marker date="1392144438000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392144438000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392144438000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -808,13 +837,6 @@
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="13" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/lib/beermapping_api_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
@@ -849,7 +871,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/beer_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="376" selection-end="376" vertical-scroll-proportion="0.61503416" vertical-offset="0" max-vertical-offset="439">
+        <state line="18" column="3" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/beers/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/beers/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="872" selection-end="872" vertical-scroll-proportion="-14.541667" vertical-offset="71" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/beers/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="26" selection-start="325" selection-end="325" vertical-scroll-proportion="-6.4166665" vertical-offset="116" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/lib/beermapping_api_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="3" selection-start="5960" selection-end="5960" vertical-scroll-proportion="0.9600939" vertical-offset="326" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
