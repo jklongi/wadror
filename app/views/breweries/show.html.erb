@@ -1,37 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h2>
-    <strong>Name:</strong>
-    <%= @brewery.name %>
-  </h2>
-</p>
+<h2><%= @brewery.name %>
+  <% if not @brewery.active  %>
+      <span class="label label-info">retired</span>
+  <% end %>
+</h2>
 
 <p>
-  <font face="cursive">
-      <strong>Established at </strong>
-      <%= @brewery.year %>
-  </font>
+  <em>Established year:</em>
+  <%= @brewery.year %>
 </p>
 
-<p>
-  <strong>Count:</strong>
-  <%= @brewery.beers.count %>
-</p>
+<p>Number of beers <%= @brewery.beers.count%> </p>
 
-<p>
+<ul>
   <% @brewery.beers.each do |beer| %>
-    <%= link_to (beer.name), beer %>
+      <li><%= link_to beer.name, beer %></li>
   <% end %>
-</p>
+</ul>
 
-<p>
-  <% if @brewery.ratings.empty? %>
-      brewery has not yet been rated!
-  <% else %>
-      <%= @brewery.average_rating %>
-  <% end %>
-</p>
+<% if @brewery.ratings.empty? %>
+    <p>beers of the brewery have not yet been rated! </p>
+<% else %>
+    <p>Has <%= pluralize(@brewery.ratings.count,'rating') %>, average <%= @brewery.average_rating %> </p>
+<% end %>
 
-<%= link_to 'Edit', edit_brewery_path(@brewery) %> |
+<% if current_user %>
+    <%= link_to 'Edit', edit_brewery_path(@brewery), class:"btn btn-warning"  %>
+    <%= link_to 'Destroy', @brewery, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger"  %>
+<% end %>
 

@@ -15,13 +15,11 @@
   <%= @user.favorite_brewery %>
 </p>
 
-<p>
-  <% if @user.ratings.empty? %>
-      No ratings yet!
-  <% else %>
-      <%= @user.average_rating %>
-  <% end %>
-</p>
+<% if @user.ratings.empty? %>
+    <p>beer has not yet been rated!</p>
+<% else %>
+    <p>has <%= @user.ratings.count %> ratings, average score <%= @user.average_rating %></p>
+<% end %>
 
 <ul>
   <% @user.ratings.each do |rating| %>
