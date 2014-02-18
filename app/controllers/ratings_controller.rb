@@ -5,6 +5,11 @@ class RatingsController < ApplicationController
 
   def index
     @ratings = Rating.all
+
+    respond_to do |format|
+      format.html { } # renderöidään oletusarvoinen template
+      format.json { render json: @ratings }
+    end
   end
 
   def new

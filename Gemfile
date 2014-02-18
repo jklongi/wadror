@@ -7,6 +7,8 @@ gem 'byebug', group: [:development, :test]
 
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+gem 'jquery-turbolinks'
+
 group :development, :test do
   gem 'sqlite3'
 end
@@ -22,13 +24,21 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.14.1'
 end
 
+gem 'bootstrap-sass'
+
+group :development do
+  gem 'rails_layout'
+end
+
 group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
   gem 'webmock'
+  gem 'selenium-webdriver'
 end
 
+gem 'database_cleaner', '< 1.1.0'
 
 gem 'httparty'
 

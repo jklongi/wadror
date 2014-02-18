@@ -17,6 +17,13 @@ Ratebeer::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  get 'ngbeerlist', to:'beers#nglist'
+
+  get 'beerlist', to:'beers#list'
+
+  #get 'brewerylist', to:'breweries#list'
+
+  get 'ngbrewerylist', to:'breweries#nglist'
 
   get 'ratings', to: 'ratings#index'
 
